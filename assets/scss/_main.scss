@@ -1,0 +1,365 @@
+
+::-webkit-scrollbar-track {
+  background-color: rgba($black, 0);
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+  background-color: rgba($black, 0);
+}
+::-webkit-scrollbar-thumb {
+  background-color: $theming1;
+}
+
+
+body{
+  // font-family: 'Nunito', sans-serif !important;
+  font-family: 'Barlow', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.accordion-button:hover {
+  z-index: unset !important;
+}
+
+// ***** gap section start *****
+.common-gap {
+  margin-top: 50px;
+}
+.common-gap-two{
+  margin-top:70px;
+}
+.common-padding {
+  padding-block: 40px;
+}
+
+// ***** gap section end ***** 
+
+
+// ***** heading section start *****
+.heading-section {
+  & .heading {
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: normal;
+    // padding-bottom: 5px;
+    padding-bottom: 37px;
+    display: inline-flex;
+    &::after {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      margin-left: -20px;
+      bottom: 0px;
+      content: '';
+      z-index: 2;
+      display: block;
+      background-color: #ffffff;
+      background-image: url(../img/bhagwa.png) ;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      border-radius: 12px;
+      content: "";
+      background-color: $theme1;
+      z-index: 1;
+    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 50%;
+    //   height: 3px;
+    //   width: 115px;
+    //   border-radius: 8px;
+    //   transform: translateX(-50%);
+    //   background-color: $theme1;
+    // }
+
+    &.heading-two {
+      &::after {
+        background-color: #ffca99;
+      }
+    }
+  }
+}
+// ***** heading section end *****
+
+
+// ***** page heading section start *****
+.heading-page {
+  height: 320px;
+  background: url(../img/blog.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($black, 0.6);
+  }
+  & .page-title {
+    font-size: 42px;
+    color: $theme1;
+    background: #fffffff7;
+    padding: 8px 27px;
+    line-height: normal;
+    border-radius: 6px;
+    text-align: center;
+  }
+}
+.about-heading {
+  background: url(../img/slider7.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+// ***** page heading section end *****
+
+
+// ***** breadcrumb section start ***** 
+.breadcrumb-section {
+  padding-bottom: 15px;
+  padding-top: 8px;
+  & .breadcrumb-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: lighten($black, 70);
+    & a {
+      color: $theme1;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $theme2;
+      }
+    }
+  }
+  & .breadcrumb {
+    margin-bottom: 0;
+  }
+}
+// ***** breadcrumb section end *****
+
+
+// ***** input start *****
+.input-data {
+  margin-top: 15px;
+  .input-label {
+    font-size: 16px;
+    color: $black;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0 5px 2px;
+  }
+  & .form-input {
+    font-size: 15px;
+    color: $black;
+    height: 42px;
+    &::placeholder {
+      font-size: 15px;
+      color: $black;
+    }
+    &:focus {
+      border: 2px solid $theme1;
+    }
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+  & input[type="date"] {
+    position: relative;
+    &::before {
+      content:  "\f073";
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Font Awesome 5 Free';
+    }
+  }
+  & .number-btn {
+    height: 42px;
+    padding-inline: 15px;
+    font-size: 14px;
+  }
+  & .number {
+    & input {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  & .textarea {
+    height: 100px;
+  }
+}
+// ***** input end *****
+
+
+// ***** common button start *****
+.common-btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: $white;
+  line-height: normal;
+  background: $theme1;
+  padding: 8px 18px ;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  &:hover {
+    background: lighten($theme2, 0);
+  }
+}
+// ***** common button end *****
+
+
+// ***** container fluid padding start *****
+@include media-breakpoint-down(lg) {
+   // ***** heading section start *****
+   .heading-section {
+    & .heading {
+      font-size:34px;
+    }
+  }
+  // ***** heading section end *****
+
+  // ***** page heading section start *****
+  .heading-page {
+    height: 290px;
+    & .page-title {
+      font-size: 38px;
+    }
+  }
+  // ***** page heading section end *****
+}
+@include media-breakpoint-down(md) {
+  // ***** heading section start *****
+  .heading-section {
+    & .heading {
+      font-size:28px;
+      &::after {
+        width: 35px;
+        height: 35px;
+      }
+      &::before {
+        width: 70%;
+        bottom: 15px;
+      }
+    }
+  }
+  // ***** heading section end *****
+
+  // ***** gap section start *****
+  .common-gap {
+    margin-top: 45px;
+  }
+  .common-padding {
+    padding-block: 35px;
+  }
+  // ***** gap section end ***** 
+
+  // ***** page heading section start *****
+   .heading-page {
+    height: 260px;
+    & .page-title {
+      font-size: 34px;
+    }
+  }
+  // ***** page heading section end *****
+
+  // ***** breadcrumb section start ***** 
+  .breadcrumb-section {
+    padding-bottom: 0px;
+  }
+  // ***** breadcrumb section end *****
+
+   // ***** input start *****
+   .input-data {
+    & .input-label {
+      font-size: 15px;
+    }
+  }
+  // ***** input end *****
+}
+@include media-breakpoint-down(sm) {
+  .container-fluid {
+    padding-inline: 5px !important;
+  }
+  .common-btn {
+    font-size: 14px;
+  }
+
+  // ***** heading section start *****
+  .heading-section {
+    & .heading {
+      font-size:24px;
+      padding-bottom: 35px;
+      letter-spacing: 0.5px;
+    }
+  }
+  // ***** heading section end *****
+
+  // ***** gap section start *****
+  .common-gap {
+    margin-top: 40px;
+  }
+  .common-padding {
+    padding-block: 30px;
+  }
+  // ***** gap section end ***** 
+
+  // ***** input start *****
+  .input-data {
+    & .input-label {
+      font-size: 14px;
+    }
+    & .form-input {
+      font-size: 14px;
+    }
+    & .textarea {
+      height: 90px;
+    }
+  }
+  // ***** input end *****
+
+  // ***** page heading section start *****
+  .heading-page {
+    height: 220px;
+    & .page-title {
+      font-size: 25px;
+    }
+  }
+  // ***** page heading section end *****
+
+  // ***** breadcrumb section start ***** 
+  .breadcrumb-section {
+    & .breadcrumb-item {
+      font-size: 15px;
+    }
+  }
+  // ***** breadcrumb section end *****
+}
+// ***** container fluid padding end *****
