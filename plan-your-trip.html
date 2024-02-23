@@ -123,36 +123,12 @@
     <!-- breadcrumb section end  -->
 
     <!-- plan your trip section start  -->
-    <section class="container-fluid common-gap plantrip-section">
+    <section class="container-fluid mt-lg-5 mt-4 plantrip-section">
         <div class="container">
             <div class="plan-card border">
                 <form action="">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="input-data mt-0">
-                                <label for="" class="input-label">Name</label>
-                                <input type="text" class="form-control form-input shadow-none" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-data mt-0">
-                                <label for="" class="input-label">Phone Number</label>
-                                <input type="text" class="form-control form-input shadow-none" placeholder="Phone Number">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-data mt-0">
-                                <label for="" class="input-label">Email Address</label>
-                                <input type="text" class="form-control form-input shadow-none" placeholder="Email Address">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-data mt-0">
-                                <label for="" class="input-label">Date</label>
-                                <input type="date" class="form-control form-input shadow-none">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                    <div class="row g-3">               
+                        <div class="col-lg-4 col-md-6">
                             <div class="input-data mt-0">
                                 <label for="" class="input-label">No. Of Days</label>
                                 <select class="form-select form-input shadow-none">
@@ -171,7 +147,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-4 col-md-6">
                             <div class="input-data mt-0">
                                 <label for="" class="input-label">Adult</label>
                                 <select class="form-select form-input shadow-none">
@@ -183,7 +159,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-4 col-md-6">
                             <div class="input-data mt-0">
                                 <label for="" class="input-label">Child Age</label>
                                 <select class="form-select form-input shadow-none">
@@ -203,24 +179,81 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-4 col-md-6">
                             <div class="input-data mt-0">
-                                <label for="" class="input-label">Car Type</label>
-                                <select class="form-select form-input shadow-none">
-                                    <option value=""> Car Type</option>
-                                    <option value="Economy Cars">Economy Cars</option>
-                                    <option value="Luxury Cars">Luxury Cars</option>
-                                    <option value="Suv Cars">Suv Cars</option>
-                                    <option value="Coaches">Coaches</option>
-                                </select>
+                                <label for="" class="input-label">Date of Arrival </label>
+                                <div class="dateinput">
+                                    <input type="text" id="datepicker" placeholder="Date of Arrival" class="form-control form-input shadow-none">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-data mt-0">
+                                <label for="" class="input-label">Hotel Type </label>
+                                <div class="d-flex align-items-center pt-2 gap-sm-4 gap-2">
+                                    <div class="hoteltype-title d-flex align-items-center">
+                                        <input type="radio" name="hoteltype" id="5star" hidden checked>
+                                        <label for="5star" class="d-flex star-label align-items-center">
+                                            <span class="d-flex align-items-center rounded-5 justify-content-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            5 Star  
+                                        </label>
+                                    </div>
+                                    <div class="hoteltype-title d-flex align-items-center">
+                                        <input type="radio" name="hoteltype" id="4star" hidden>
+                                        <label for="4star" class="d-flex star-label align-items-center">
+                                            <span class="d-flex align-items-center rounded-5 justify-content-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            4 Star  
+                                        </label>
+                                    </div>
+                                    <div class="hoteltype-title d-flex align-items-center">
+                                        <input type="radio" name="hoteltype" name="hoteltype" id="3star" hidden>
+                                        <label for="3star" class="d-flex star-label align-items-center">
+                                            <span class="d-flex align-items-center rounded-5 justify-content-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            3 Star  
+                                        </label>
+                                    </div>
+                                    <div class="hoteltype-title d-flex align-items-center">
+                                        <input type="radio" name="hoteltype" name="hoteltype" id="budget" hidden>
+                                        <label for="budget" class="d-flex star-label align-items-center">
+                                            <span class="d-flex align-items-center rounded-5 justify-content-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Budget Hotels 
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-data mt-0">
-                                <label for="" class="input-label">Your message</label>
+                                <label for="" class="input-label">What's your ideal trip</label>
                                 <div>
-                                    <textarea name="" id="" class="form-control form-input shadow-none textarea" placeholder="Your message"></textarea>
+                                    <textarea name="" id="" class="form-control form-input shadow-none textarea" placeholder="Tell us where you want to visit, what your must-sees and your interests are."></textarea>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="input-data mt-0">
+                                <label for="" class="input-label">Name</label>
+                                <input type="text" class="form-control form-input shadow-none" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="input-data mt-0">
+                                <label for="" class="input-label">Phone Number</label>
+                                <input type="text" class="form-control form-input shadow-none" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="input-data mt-0">
+                                <label for="" class="input-label">Email Address</label>
+                                <input type="text" class="form-control form-input shadow-none" placeholder="Email Address">
                             </div>
                         </div>
                         <div class="col-12">
@@ -475,5 +508,20 @@
     <script src="assets/libs/swiperjs/js/swiper-bundle.min.js"></script>
     <!-- glightbox js  -->
     <script src="assets/libs/glightbox/glightbox.js"></script>
+
+    <script>
+        $(function() {
+    $("#datepicker").datepicker();
+});
+    </script>
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- jQuery UI CSS -->
+<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
 </body>
 </html> 

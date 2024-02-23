@@ -149,28 +149,23 @@ body {
 .input-data .form-input:focus {
   border: 2px solid #F97D09;
 }
-.input-data input[type=date]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-}
-.input-data input[type=date] {
+.input-data .dateinput {
   position: relative;
 }
-.input-data input[type=date]::before {
-  content: "\f073";
+.input-data .dateinput::before {
+  content: "";
   position: absolute;
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: "Font Awesome 5 Free";
+  background: url(../img/date.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 17px;
+  width: 17px;
+}
+.input-data .dateinput input {
+  cursor: pointer;
 }
 .input-data .number-btn {
   height: 42px;
@@ -183,6 +178,18 @@ body {
 }
 .input-data .textarea {
   height: 100px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+  background: #F97D09 !important;
+  color: #fff !important;
+}
+
+.ui-datepicker th,
+.ui-datepicker td,
+.ui-datepicker td a {
+  font-size: 14px;
+  text-align: center !important;
 }
 
 .common-btn {
@@ -1477,8 +1484,10 @@ body {
     line-height: 23px;
   }
   .blog-section .blog-card .blog-read-btn {
-    font-size: 15px .blog-section .blog-card .blog-read-btn i;
-    font-size-font-size: 14px;
+    font-size: 15px;
+  }
+  .blog-section .blog-card .blog-read-btn i {
+    font-size: 14px;
   }
   .blog-section .blog-card .blog-icons {
     margin-bottom: 10px;
@@ -2229,4 +2238,38 @@ body {
   padding: 15px;
   border-radius: 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.plantrip-section .hoteltype-title .star-label {
+  font-size: 15px;
+  font-weight: 500;
+  gap: 5px;
+  cursor: pointer;
+}
+.plantrip-section .hoteltype-title .star-label span {
+  height: 16px;
+  width: 16px;
+  background-color: #cfcfcf;
+  font-size: 12px;
+  color: #fff;
+}
+.plantrip-section .hoteltype-title input {
+  accent-color: #F97D09;
+}
+.plantrip-section .hoteltype-title input:checked ~ .star-label span {
+  background-color: #F97D09;
+}
+
+@media (max-width: 575.98px) {
+  .plantrip-section .plan-card {
+    padding: 12px;
+  }
+  .plantrip-section .hoteltype-title .star-label {
+    font-size: 14px;
+    gap: 4px;
+  }
+  .plantrip-section .hoteltype-title .star-label span {
+    height: 15px;
+    width: 15px;
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=style.css.map */
