@@ -1845,7 +1845,6 @@
       }
     }
   }
-
 }
 // enquiry modal media query start 
 @include media-breakpoint-down(lg) {
@@ -2212,3 +2211,37 @@
   }
 }
 // ****** plan your trip section end ******
+
+//  policy card section start ******
+.policy-card {
+  padding: 13px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  & .policy-heading {
+    font-size: 19px;
+    font-weight: 600;
+  }
+  & hr {
+    margin-block: 10px;
+  }
+  & .policy-content {
+    & p {
+      color: #484848;
+      margin-bottom: 9px;
+      line-height: 26px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .policy-card {
+    padding: 11px;
+    & .policy-heading {
+      font-size: 18px;
+    }
+    & .policy-content {
+      & p {
+        line-height: 27px;
+      }
+    }
+  }
+}
+//  policy card section end ******
